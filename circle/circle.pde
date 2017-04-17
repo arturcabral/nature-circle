@@ -3,10 +3,12 @@ float r = 100;
 int NUM = 18;
 float dx, dy;
 float[] var = new float[NUM];
+circles um = new circles(2, 100);
 
 void setup () {
   size(400,600);
   noStroke();
+  //circles umc = new circles(2, 100);
 }
 
 void update() {
@@ -20,8 +22,8 @@ void draw() {
   background(0);
   fill(255);
   translate(width/2,height/2);
-  circlecor1();
-  circlebase();
+  //circlebase();
+  um.circlecreator();
   println(var[1]);
 }
 
@@ -36,15 +38,8 @@ void circlebase() {
   }
 }
 
-void circlecor1() {
-  for (int i = 0 ; i < NUM    ; i ++) {
-    float x = r * cos(a);
-    float y = r * sin(a);
-    r = var[i] + random(2,4);
-    a = a + TWO_PI/NUM;
-    fill(125);
-    ellipse(x,y,20,20);  
-  }
-}
+
+
+
 
 
