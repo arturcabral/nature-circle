@@ -1,21 +1,30 @@
+boolean active = false;
 float a = 0;
-int NUM = 18;
+int NUM = 120;
 float r = 100;
-circles um = new circles(2, 100);
-circles dois = new circles(2, 50);
-circles tres = new circles(2, 200);
+float t =0;
+int var = 50;
+int vel = 40 ;
+circles um = new circles(255,255,255);
+circles dois = new circles(20,177,252);
+circles tres = new circles(250,25,67);
 
 void setup() {
   size(400,600);
+  frameRate(20);
+  noStroke();
+}
+void pre() {
+   if (keyPressed == true) {
+     active = !active;
+   }
 }
 void draw() {
-   translate(width/2,height/2);
+  pre();
+  tempo();
+  translate(width/2,height/2);
   background(0);
-   um.circlecreator();
-println(a);
-     
-
-  // dois.circlecreator();
-  // tres.circlecreator();
-
+  tres.circlecreator();
+  dois.circlecreator();
+  um.circlecreator();
 }
