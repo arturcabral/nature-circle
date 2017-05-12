@@ -9,7 +9,7 @@ class circles {
       blue = B;
     }
   void circlecreator() {
-    a = 0;
+    a = 0; //impede do circulo rodar
     for (int i = 0 ; i < NUM ; i ++) {
      float x = r * cos(a);
      float y = r * sin(a);
